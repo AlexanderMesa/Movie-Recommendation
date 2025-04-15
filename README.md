@@ -1,2 +1,4 @@
 We parse the u.data, u.item, and u.user data files and convert them to CSV files.
-Once we have the CSV files, we can compare the user-user and item-item similarities and recommend movies based on the cosine similarity scores
+Once we have the CSV files, we can compare the user-user and item-item similarities and recommend movies based on the cosine similarity scores.
+We choose the top 10 most similar users/items and find the movie list from users by computing the average movie ratings among users for each movie. That way, we can easily recommend movies from the user/item input.
+The random walker graph chooses a random user or item node so we can get list of movies based on nodes we visited the most. We output a list of movies corresponding to nodes most frequently visited.
